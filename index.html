@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1200>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Шаблон Фигма</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/styles/style.css">
@@ -30,7 +30,12 @@
                     <li class="nav-item"><a class="nav-link" href="#">Оплата</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Доставка</a></li>
                 </ul>
-
+                <div class="toggle-menu">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+               
             </header>
         </div>
     </div>
@@ -113,38 +118,58 @@
                 <div class="footer-nav">
                     <ul footer-list>
                         <li class="footer-list-item-title">Основные ссылки</li>
-                        <li class="footer-list-item"><a class="footer-link" href="">О компании</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Каталог</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Доставка</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Оплата</a></li>
+                        <li class="footer-list-item"><a class="footer-list-link" href="">О компании</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Каталог</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Доставка</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Оплата</a></li>
                     </ul>
                     <ul footer-list>
                         <li class="footer-list-item-title">Категории</li>
-                        <li class="footer-list-item"><a class="footer-link" href="">Мужская одежда</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Женская одежда</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Детская одежда</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Для животных</a></li>
+                        <li class="footer-list-item"><a class="footer-list-link" href="">Мужская одежда</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Женская одежда</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Детская одежда</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Для животных</a></li>
                     </ul>
                     <ul footer-list>
                         <li class="footer-list-item-title">Полезные ссылки</li>
-                        <li class="footer-list-item"><a class="footer-link" href="">Таблица размеров</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Блог о моде</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Наша миссия</a></li>
+                        <li class="footer-list-item"><a class="footer-list-link" href="">Таблица размеров</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Блог о моде</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Наша миссия</a></li>
                     </ul>
                     <ul footer-list>
                         <li class="footer-list-item-title">Соц сети</li>
-                        <li class="footer-list-item"><a class="footer-link" href="">VK.com</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Facebook</a></li>
-                        <li class="footer-list-item"> <a class="footer-link" href="">Instagram</a></li>
+                        <li class="footer-list-item"><a class="footer-list-link" href="">VK.com</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Facebook</a></li>
+                        <li class="footer-list-item"> <a class="footer-list-link" href="">Instagram</a></li>
                     </ul>
                 </div>
             </footer>
         </div>
     </div>
+    <div class="nav-bar">
+        <ul class="nav-list">
+            <li class="nav-list-item"><a href="" class="nav-link">Для мужчин</a></li>
+            <li class="nav-list-item"><a href="" class="nav-link">Для женщин</a></li>
+            <li class="nav-list-item">
+                <a href="" class="nav-link">Для детей</a>
+            </li>
+            <li class="nav-list-item"><a href="" class="nav-link">Оплата</a></li>
+            <li class="nav-list-item">
+                <a href="" class="nav-link">Доставка</a>
+            </li>
+        </ul>
+    </div>
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
+</script>
+<script>
+    let toggleButton = document.querySelector('.toggle-menu');
+let navBar = document.querySelector('.nav-bar');
+toggleButton.addEventListener('click', function () {
+	navBar.classList.toggle('toggle');
+});
 </script>
 
 </html>
